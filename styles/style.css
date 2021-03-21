@@ -1,0 +1,68 @@
+.add-contact-wrapper {
+    padding-left: 1%;
+    padding-top: 2%;
+}
+
+.contact-add-form input {
+    margin-bottom: 1%;
+}
+
+.contacts-list {
+    margin-top: 6%;
+}
+
+.contacts-list-container {
+    margin-top: 3%;
+    padding-left: 1%;
+}
+
+.container-header > div{
+    display: inline;
+}
+
+.contacts-list-container {
+    font-size: 20px;
+    margin: auto;
+    width: 90%;
+}
+
+.header-container {
+    display: flex;
+}
+
+.header-column {
+    width: 90%;
+    text-align: center;
+    background-color: #ebebeb;
+    border: 1px solid black;
+    padding: 15px;
+    margin-top: 2%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main-container div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-start;
+}
+
+#phone-main, #name-main, #email-main, #address-main, #operation-main {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    padding: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#operation-main button {
+    border: 1px solid black;
+    font-size: 15px;
+    margin: 0 1% 0 1%
+}

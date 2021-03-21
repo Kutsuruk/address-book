@@ -7,8 +7,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Address book</title>
     <link rel="shortcut icon" type="image/jpg" href="img/address-book2.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+<div class="container">
+    <h1 class="text-center">Address book</h1>
 
+    <div class="contacts-list-container">
+        <div class="header-container">
+            <div class="header-column phone-header">Phone</div>
+            <div class="header-column name-header">Full name</div>
+            <div class="header-column email-header">Email</div>
+            <div class="header-column address-header">Address</div>
+            <div class="header-column operation-header">Operation</div>
+        </div>
+        <div id="main" class="main-container">
+
+        </div>
+    </div>
+
+    <div id="" class="panel">
+        <form id="contact" action="#">
+            <div class="add-contact-wrapper">
+                <h2 class="col-4 text-center">Add new record</h2>
+                <div class="contact-add-form col-4">
+                    <input id="phone" class="form-control" type="text" placeholder="Phone number" aria-label="default input example">
+                    <input id="name" class="form-control" type="text" placeholder="Full name" aria-label="default input example">
+                    <input id="email" class="form-control" type="email" placeholder="example@email.com" aria-label="default input example">
+                    <input id="address" class="form-control" type="text" placeholder="Address" aria-label="default input example">
+                </div>
+                <div class="add-contact-btn">
+                    <input id="add-btn" class="col-4" type="submit" value="Add new record" onclick="addNewRecordToTable()" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="scripts/index.js"></script>
 </body>
 </html>
