@@ -1,68 +1,178 @@
-.add-contact-wrapper {
-    padding-left: 1%;
-    padding-top: 2%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.contact-add-form input {
-    margin-bottom: 1%;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-
-.contacts-list {
-    margin-top: 6%;
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
 }
-
-.contacts-list-container {
-    margin-top: 3%;
-    padding-left: 1%;
+.main-container{
+    margin: 0px auto;
+    padding: 25px;
+    border-radius: 5px;
 }
-
-.container-header > div{
-    display: inline;
+.record-input, .record-display{
+    border-radius: 10px;
+    padding: 20px 0;
+    margin: 30px 0;
+    box-shadow: 0px 0px 6px 0px rgba(8, 0, 8, 1);
 }
-
-.contacts-list-container {
-    font-size: 20px;
-    margin: auto;
-    width: 90%;
-}
-
-.header-container {
-    display: flex;
-}
-
-.header-column {
-    width: 90%;
+.record-input > h2, .record-display > h2{
+    padding: 10px 0;
     text-align: center;
-    background-color: #ebebeb;
-    border: 1px solid black;
-    padding: 15px;
-    margin-top: 2%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 22px;
+}
+.record-input{
+    color: #000;
+    background: #f0f0f0;
+}
+.record-display{
+    position: relative;
 }
 
-.main-container div {
+
+/** record input **/
+.entry-form{
+    padding: 10px 0;
+}
+form{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+form label{
+    font-weight: 500;
+    opacity: 0.7;
+}
+form label, form input{
+    display: block;
+    outline: none;
+    border-radius: 25px;
+    border: none;
+}
+form input[type = "text"], form input[type = "number"]{
+    color: #000;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px 18px;
+    margin: 12px 0;
+    transition: all 0.5s ease;
+    border: 1px solid #fff;
+}
+form input:focus{
+    color: #252525;
+    border: 1px solid #252525;
 }
 
-#phone-main, #name-main, #email-main, #address-main, #operation-main {
-    width: 100%;
+.message{
     text-align: center;
-    border: 1px solid black;
-    padding: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 0;
+    visibility: hidden;
 }
 
-#operation-main button {
-    border: 1px solid black;
+/** alert types **/
+.error{
+    background: #f32013;
+    visibility: visible;
+}
+.success{
+    background: #4bb543;
+    visibility: visible!important;
+}
+
+
+.input-btn{
+    text-align: center;
+}
+
+/**  button styling **/
+button{
+    display: block;
+    width: 160px;
+    margin: 20px auto;
     font-size: 15px;
-    margin: 0 1% 0 1%
+    font-weight: 500;
+    font-family: inherit;
+    padding: 10px;
+    border: 3px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    background: #000411;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+    outline: none;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+#submit-btn span, #cancel-btn span{
+    padding-right: 5px;
+}
+
+#reset-btn{
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    width: 120px;
+}
+
+
+
+.record-display{
+    padding: 30px 40px;
+}
+.record-el{
+    display: block;
+    padding: 4px 0;
+    text-align: center;
+    opacity: 0.9;
+}
+
+#labelling{
+    font-weight: 700;
+}
+.record-item{
+    color: #000;
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin: 15px 0;
+    background: #fff;
+    box-shadow: 0 0 6px #777;
+}
+
+#delete-btn span{
+    padding-right: 5px;
+}
+
+
+
+
+@media screen and (min-width: 992px){
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 90vw;
+        grid-column-gap: 30px;
+    }
+    .record-input{
+        height: 700px;
+    }
+    .record-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
 }
